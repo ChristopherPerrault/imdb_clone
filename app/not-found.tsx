@@ -7,6 +7,8 @@ interface ErrorProps {
   reset: () => void;
 }
 
+//TODO: fix "reset is not a function" bug that appears when clicking Try Again button. Possible solution is that any parent component that's trying to render Error should be triggering the reset. useState maybe?
+
 const Error: React.FC<ErrorProps> = ({ error, reset }) => {
   useEffect(() => {
     console.log(error);
