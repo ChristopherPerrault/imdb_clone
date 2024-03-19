@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+// why are my commits not working
 export default function Loading() {
   return (
     <div className="flex justify-center">
