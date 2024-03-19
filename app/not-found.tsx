@@ -15,7 +15,7 @@ const Error: React.FC<ErrorProps> = ({ error, reset }) => {
   return (
     <div className="mt-10 text-center">
       <h1>Something went wrong</h1>
-      <button className="hover:text-amber-600" onClick={() => reset()}>
+      <button className="hover:text-blue-600" onClick={() => reset()}>
         Try Again
       </button>
     </div>
