@@ -1,6 +1,7 @@
 "use client";
-import Link from "next/link";
 import { useSearchParams, ReadonlyURLSearchParams } from "next/navigation";
+import { Suspense } from "react";
+import Link from "next/link";
 
 interface NavbarItemProps {
   title: string;
@@ -24,5 +25,11 @@ const NavbarItem: React.FC<NavbarItemProps> = ({ title, param }) => {
     </Link>
   );
 };
-
-export default NavbarItem;
+// Suspense required for build as a fallback during fetch completion
+export default function WrappedNavbarItem({ title, param }: NavbarItemProps) {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <NavbarItem title={title} param={param} />
+    </Suspense>
+  );
+}
