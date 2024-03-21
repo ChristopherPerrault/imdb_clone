@@ -7,12 +7,11 @@ import DarkModeToggle from "./DarkModeToggle";
 export default function Header() {
   return (
     <div className="flex items-center justify-between max-w-6xl py-6 mx-2 sm:mx-auto">
+      <div className="flex">
+        <TopNavItem title="HOME" url="/" Icon={FiHome} />
+        <TopNavItem title="ABOUT" url="/about" Icon={AiOutlineInfoCircle} />
+      </div>
       <div className="flex items-center space-x-5">
-        <div className="flex">
-          <TopNavItem title="HOME" url="/" Icon={FiHome} />
-          <TopNavItem title="ABOUT" url="/about" Icon={AiOutlineInfoCircle} />
-        </div>
-
         <DarkModeToggle />
         <Link href="/">
           <h2>
