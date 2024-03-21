@@ -1,22 +1,24 @@
-import React from 'react';
+import Card from "./Card";
 
 interface Result {
- id: string;
- original_title: string;
+  id: string;
+  original_title: string;
+  overview: string;
+  vote_count: number;
 }
 
 interface ResultsProps {
- results: Result[];
+  results: Result[];
 }
 
 const Results: React.FC<ResultsProps> = ({ results }) => {
- return (
+  return (
     <div>
       {results.map((result) => (
-        <div key={result.id}>{result.original_title}</div>
+        <Card key={result.id} result={result} />
       ))}
     </div>
- );
+  );
 };
 
 export default Results;
