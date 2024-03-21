@@ -1,15 +1,18 @@
 import Results from "./_components/Results";
+import { Result } from "./types";
 
 interface SearchParams {
   genre?: string;
 }
 
-interface Result {
-  id: string;
-  original_title: string;
-}
+// interface Result {
+//   id: string;
+//   original_title: string;
+//   overview?: string;
+//   vote_count?: number;
+// }
 
-const API_KEY = process.env.API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 
 const Home: React.FC<{ searchParams: SearchParams }> = async ({
   searchParams,
