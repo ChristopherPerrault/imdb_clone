@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* to remove the scrollbar */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* to be sure that it works across multiple browsers*/
+html {
+  scrollbar-width: none;
+}
