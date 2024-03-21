@@ -5,12 +5,6 @@ interface SearchParams {
   genre?: string;
 }
 
-// interface Result {
-//   id: string;
-//   original_title: string;
-//   overview?: string;
-//   vote_count?: number;
-// }
 
 const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 

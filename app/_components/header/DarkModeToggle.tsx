@@ -30,5 +30,3 @@ export default function DarkModeToggle() {
     </>
   );
 }
-
-// import { HiOutlineLightBulb } from "react-icons/hi2";

@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Karma } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/header/Header";
 import Providers from "./Providers";
 import Navbar from "./_components/navbar/Navbar";
 import SearchBar from "./_components/SearchBar";
 
-const inter = Inter({ subsets: ["latin"] });
+const karma = Karma({ subsets: ["latin"], weight: "600" });
 
 export const metadata: Metadata = {
   title: "IMDb Clone",
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={karma.className}>
         <Providers>
           <Header />
           <Navbar />
